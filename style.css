@@ -93,7 +93,7 @@ body {
         width: 100%;
         position: fixed;
         z-index: 1000;
-        background-color: #3d383881;
+        background-color: #1B1B1B;
     }
 
     .menu {
@@ -281,7 +281,7 @@ body {
         justify-content: center;
         align-items: center;
         height: 50px;
-        font-size: 10pt;
+        font-size: 8pt;
         background-color: rgba(22, 22, 22, 0.514);
     }
     /* classes */
@@ -388,7 +388,7 @@ body {
         width: 100%;
         position: fixed;
         z-index: 1000;
-        background-color: #3d383881;
+        background-color: #1B1B1B;
     }
 
     .menu {
@@ -682,7 +682,7 @@ body {
         width: 100%;
         position: fixed;
         z-index: 1000;
-        background-color: #3d383881;
+        background-color: #1B1B1B;
     }
 
     .menu {
@@ -957,8 +957,6 @@ body {
     .menu-mobile{
         cursor: pointer;
         display: block;
-
-    
     }
     .linhas{
         height: 2px;
@@ -977,7 +975,7 @@ body {
         width: 100%;
         position: fixed;
         z-index: 1000;
-        background-color: #3d383881;
+        background-color: #1B1B1B;
     }
 
     .menu {
