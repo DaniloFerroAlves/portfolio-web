@@ -1,0 +1,1505 @@
+* {
+    padding: 0;
+    margin: 0;
+    /* font-family: 'Exo 2', sans-serif; */
+    font-family: 'Poppins', sans-serif;
+
+    color: white;
+}
+
+a,
+ul,
+li {
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background-color: #1B1B1B;
+}
+.bxl-linkedin:hover, .bxl-github:hover, .bxl-instagram:hover{
+    color: #6e6e6e;
+    transition: all 0.5s;
+}
+.allcontent {
+    display: none;
+}
+.box-load {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(90deg, rgba(44, 43, 43, 0.5), rgba(37, 37, 37, 0.5));
+}
+.pre{
+    font-size: 40pt;
+    text-align: center;
+}
+.bolinhas > span{
+    background-color: #0effa3;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 0 8px;
+    transform: translate3d(0);
+    animation: quicar 0.4s infinite alternate;
+}
+.bolinhas > span:nth-child(2) {
+    background-color: #6e6e6e;
+    animation-delay: 0.4s;
+}
+.bolinhas > span:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.bolinhas{
+    display: flex;
+}
+
+@keyframes quicar{
+    to {
+        width: 20px;
+        height: 20px;
+        transform: translate3d(0, -16px, 0);
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 25pt;
+    }
+    .menu-mobile{
+        cursor: pointer;
+        display: block;
+    }
+    .linhas{
+        height: 2px;
+        width: 20px;
+        background-color: white;
+        margin-bottom: 5px;
+        transition: 0.5s;
+    }
+    /* HEADER */
+    .header-menu {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 15px;
+        text-transform: uppercase;
+        width: 100%;
+        position: fixed;
+        z-index: 1000;
+        background-color: #3d383881;
+    }
+
+    .menu {
+        display: flex;
+        gap: 20px;
+        height: 90%;
+        flex-direction: column;
+        justify-content: space-around;
+        font-size: 30pt;
+        font-weight: 300;
+        z-index: 1000;
+
+    }
+
+    .navbar {
+        backdrop-filter: blur(7px);
+        position: absolute;
+        top: 60px;
+        height: calc(100vh - 70px);
+        width: 100%;
+        display: none;
+        justify-content: center;
+        z-index: 1000;
+    }
+    .navbar.active{
+        display: flex;
+    }
+    #mobile.active > div:nth-child(1) {
+        transform: rotate(45deg);
+        top: 7px;
+        position: relative;
+    }
+    #mobile.active > div:nth-child(2) {
+        display: none;
+    }
+    #mobile.active > div:nth-child(3) {
+        transform: rotate(-45deg);
+    }
+
+    .navbar-social {
+        width: 40%;
+        font-size: 20pt;
+    }
+
+    .logo {
+        width: 10%;
+        display: none;
+    }
+
+    .menu a:hover {
+        letter-spacing: 2px;
+    }
+
+    .menu-social {
+        display: flex;
+        gap: 15px;
+    }
+
+    /* FIM DO HEADER */
+    /* CONTEUDO */
+    #container-principal {
+        max-width: 576px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .conteudo {
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .conteudo a {
+        margin-top: 10px;
+    }
+
+    .conteudo-aside {
+        display: flex;
+        width: 90%;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        margin-bottom: 100px;
+        text-align: justify;
+    }
+
+    /* projetos ------------------------------------------------*/
+    .conteudo-projetos {
+        display: flex;
+        width: 70%;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        text-align: justify;
+        flex-direction: column;
+        margin-bottom: 150px;
+    }
+
+    .projetos {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .conteudo-projetos a {
+        margin-top: 30px;
+    }
+    #vermais {
+        display: none;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    #vermais>div {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        min-width: 300px;
+        height: 300px;
+        background-color: gray;
+        overflow: hidden;
+        position: relative;
+        justify-content: center;
+
+    }
+    .projetos >div {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+        min-width: 300px;
+        height: 300px;
+        background-color: gray;
+        overflow: hidden;
+    }
+    .faixa{
+        width: 500px;
+        position: absolute;
+        display: block;
+        background-color: #0effa3;
+        rotate: 45deg;
+        text-align: center;
+        font-size: 15pt;
+        cursor: default;
+    }
+    .faixa:hover{
+        letter-spacing: 2px;
+    }
+
+    /* fim projetos ------------------------------------------------*/
+
+    /* skills */
+    .skills {
+        display: flex;
+        flex-wrap: wrap;
+        width: 80%;
+        gap: 30px;
+        justify-content: space-around;
+        margin: 0 auto;
+    }
+
+    .skills li {
+        display: flex;
+        flex-direction: column;
+        width: 100px;
+        height: 100px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .skills img {
+        height: 45px;
+        margin-top: 10px;
+    }
+    /* FIM DE SKILLS ---------------------- */
+    .footer {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        font-size: 10pt;
+        background-color: rgba(22, 22, 22, 0.514);
+    }
+    /* classes */
+    .text-center {
+        text-align: center;
+        font-size: 27pt;
+        margin-bottom: 20px;
+    }
+
+    .btn {
+        display: block;
+        max-width: 120px;
+        padding: 10px;
+        border: 1px rgb(255, 255, 255) solid;
+        text-align: center;
+        border-radius: 5px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .btn::before {
+        content: '';
+        width: 100%;
+        height: 0;
+        background-color: rgb(110, 110, 110);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(50deg);
+        z-index: -1;
+        transition: 0.5s;
+
+    }
+
+    .btn:hover::before {
+        height: 300%;
+    }
+
+    .email {
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+    .texto {
+        font-size: 14pt;
+        color: rgb(160, 159, 159);
+    }
+
+    .font-tema {
+        color: #0effa3;
+    }
+        #btnprojeto{
+        background-color: transparent;
+        cursor: pointer;
+        padding: 10px;
+        border: 1px white solid;
+        border-radius: 5px;
+        margin-top: 50px;
+    }
+        #vermais.mostrar{
+        display: flex;
+    }
+    #vermais.mostrar .conteudo-projetos{
+        height: auto;
+    }
+
+        #contato{
+        display: flex;
+        width: 90%;
+        height: 80vh;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        text-align: justify;
+    }
+}
+
+@media (min-width: 576px) {
+    h1 {
+        font-size: 38pt;
+    }
+    .menu-mobile{
+        cursor: pointer;
+        display:  block;
+    }
+    .linhas{
+        height: 2px;
+        width: 20px;
+        background-color: white;
+        margin-bottom: 5px;
+        transition: 0.5s;
+    }
+    /* HEADER */
+    .header-menu {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 15px;
+        text-transform: uppercase;
+        width: 100%;
+        position: fixed;
+        z-index: 1000;
+        background-color: #3d383881;
+    }
+
+    .menu {
+        display: flex;
+        gap: 20px;
+        height: 90%;
+        flex-direction: column;
+        justify-content: space-around;
+        font-size: 35pt;
+        font-weight: 300;
+        z-index: 1000;
+
+    }
+
+    .navbar {
+        backdrop-filter: blur(7px);
+        position: absolute;
+        top: 60px;
+        height: calc(100vh - 70px);
+        width: 100%;
+        display: none;
+        justify-content: center;
+        z-index: 1000;
+    }
+    .navbar.active{
+        display: flex;
+    }
+    #mobile.active > div:nth-child(1) {
+        transform: rotate(45deg);
+        top: 7px;
+        position: relative;
+    }
+    #mobile.active > div:nth-child(2) {
+        display: none;
+    }
+    #mobile.active > div:nth-child(3) {
+        transform: rotate(-45deg);
+    }
+
+    .navbar-social {
+        width: 20%;
+        font-size: 20pt;
+    }
+
+    .logo {
+        width: 20%;
+        display: none;
+    }
+
+    .menu a:hover {
+        letter-spacing: 2px;
+    }
+
+    .menu-social {
+        display: flex;
+        gap: 10px;
+    }
+
+    /* FIM DO HEADER */
+    /* CONTEUDO */
+    #container-principal {
+        width: 576px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .conteudo {
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .conteudo a {
+        margin-top: 10px;
+    }
+
+    .conteudo-aside {
+        display: flex;
+        width: 70%;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        text-align: justify;
+    }
+
+    /* projetos ------------------------------------------------*/
+    .conteudo-projetos {
+        display: flex;
+        width: 70%;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        text-align: justify;
+        flex-direction: column;
+        margin-bottom: 100px;
+    }
+
+    .projetos {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .conteudo-projetos a {
+        margin-top: 30px;
+    }
+
+    #vermais {
+        display: none;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    #vermais>div {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        width: 300px;
+        height: 300px;
+        background-color: gray;
+        overflow: hidden;
+        position: relative;
+        justify-content: center;
+
+    }
+    .projetos>div {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+        width: 300px;
+        height: 300px;
+        background-color: gray;
+        overflow: hidden;
+    }
+    .faixa{
+        width: 500px;
+        position: absolute;
+        display: block;
+        background-color: #0effa3;
+        rotate: 45deg;
+        text-align: center;
+        font-size: 15pt;
+        cursor: default;
+    }
+    .faixa:hover{
+        letter-spacing: 2px;
+    }
+
+    /* fim projetos ------------------------------------------------*/
+
+    /* skills */
+    .skills {
+        display: flex;
+        flex-wrap: wrap;
+        width: 80%;
+        gap: 30px;
+        justify-content: space-around;
+        margin: 0 auto;
+    }
+
+    .skills li {
+        display: flex;
+        flex-direction: column;
+        width: 100px;
+        height: 100px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .skills img {
+        height: 45px;
+        margin-top: 10px;
+    }
+
+    /* FIM DE SKILLS ---------------------- */
+    .footer {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        font-size: 13pt;
+        background-color: rgba(22, 22, 22, 0.514);
+    }
+
+    /* classes */
+    .text-center {
+        text-align: center;
+        font-size: 27pt;
+        margin-bottom: 20px;
+    }
+
+    .btn {
+        display: block;
+        max-width: 120px;
+        padding: 10px;
+        border: 1px rgb(255, 255, 255) solid;
+        text-align: center;
+        border-radius: 5px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .btn::before {
+        content: '';
+        width: 100%;
+        height: 0;
+        background-color: rgb(110, 110, 110);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(50deg);
+        z-index: -1;
+        transition: 0.5s;
+
+    }
+
+    .btn:hover::before {
+        height: 300%;
+    }
+
+    .email {
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+    .texto {
+        font-size: 18pt;
+        color: rgb(160, 159, 159);
+    }
+
+    .font-tema {
+        color: #0effa3;
+    }
+        #btnprojeto{
+        background-color: transparent;
+        cursor: pointer;
+        padding: 10px;
+        border: 1px white solid;
+        border-radius: 5px;
+        margin-top: 50px;
+    }
+        #vermais.mostrar{
+        display: flex;
+    }
+        #contato{
+        display: flex;
+        width: 70%;
+        height: 80vh;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        text-align: justify;
+    }
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 39pt;
+    }
+    .menu-mobile{
+        cursor: pointer;
+        display: block;
+    }
+    .linhas{
+        height: 2px;
+        width: 20px;
+        background-color: white;
+        margin-bottom: 5px;
+        transition: 0.5s;
+    }
+    /* HEADER */
+    .header-menu {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 15px;
+        text-transform: uppercase;
+        width: 100%;
+        position: fixed;
+        z-index: 1000;
+        background-color: #3d383881;
+    }
+
+    .menu {
+        display: flex;
+        gap: 20px;
+        height: 90%;
+        flex-direction: column;
+        justify-content: space-around;
+        font-size: 35pt;
+        font-weight: 300;
+        z-index: 1000;
+
+    }
+
+    .navbar {
+        backdrop-filter: blur(7px);
+        position: absolute;
+        top: 60px;
+        height: calc(100vh - 70px);
+        width: 100%;
+        display: none;
+        justify-content: center;
+        z-index: 1000;
+    }
+    .navbar.active{
+        display: flex;
+    }
+    #mobile.active > div:nth-child(1) {
+        transform: rotate(45deg);
+        top: 7px;
+        position: relative;
+    }
+    #mobile.active > div:nth-child(2) {
+        display: none;
+    }
+    #mobile.active > div:nth-child(3) {
+        transform: rotate(-45deg);
+    }
+
+    .navbar-social {
+        width: 20%;
+        font-size: 20pt;
+    }
+
+    .logo {
+        width: 15%;
+    }
+
+    .menu a:hover {
+        letter-spacing: 2px;
+    }
+
+    .menu-social {
+        display: flex;
+        gap: 10px;
+    }
+
+    /* FIM DO HEADER */
+    /* CONTEUDO */
+    #container-principal {
+        width: 768px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .conteudo {
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .conteudo a {
+        margin-top: 10px;
+    }
+
+    .conteudo-aside {
+        display: flex;
+        width: 70%;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        text-align: justify;
+    }
+
+    /* projetos ------------------------------------------------*/
+    .conteudo-projetos {
+        display: flex;
+        width: 100%;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        text-align: justify;
+        flex-direction: column;
+        margin-bottom: 100px;
+    }
+
+    .projetos {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .conteudo-projetos a {
+        margin-top: 30px;
+    }
+
+    #vermais {
+        display: none;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    #vermais>div {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        width: 300px;
+        height: 300px;
+        background-color: gray;
+        overflow: hidden;
+        position: relative;
+        justify-content: center;
+
+    }
+    .projetos>div {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+        width: 300px;
+        height: 300px;
+        background-color: gray;
+        overflow: hidden;
+    }
+    .faixa{
+        width: 500px;
+        position: absolute;
+        display: block;
+        background-color: #0effa3;
+        rotate: 45deg;
+        text-align: center;
+        font-size: 15pt;
+        cursor: default;
+    }
+    .faixa:hover{
+        letter-spacing: 2px;
+    }
+
+    /* fim projetos ------------------------------------------------*/
+
+    /* skills */
+    .skills {
+        display: flex;
+        flex-wrap: wrap;
+        width: 80%;
+        gap: 30px;
+        justify-content: space-around;
+        margin: 0 auto;
+    }
+
+    .skills li {
+        display: flex;
+        flex-direction: column;
+        width: 100px;
+        height: 100px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .skills img {
+        height: 45px;
+        margin-top: 10px;
+    }
+
+    /* FIM DE SKILLS ---------------------- */
+    .footer {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        font-size: 13pt;
+        background-color: rgba(22, 22, 22, 0.514);
+    }
+
+    /* classes */
+    .text-center {
+        text-align: center;
+        font-size: 27pt;
+        margin-bottom: 20px;
+    }
+
+    .btn {
+        display: block;
+        max-width: 120px;
+        padding: 10px;
+        border: 1px rgb(255, 255, 255) solid;
+        text-align: center;
+        border-radius: 5px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .btn::before {
+        content: '';
+        width: 100%;
+        height: 0;
+        background-color: rgb(110, 110, 110);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(50deg);
+        z-index: -1;
+        transition: 0.5s;
+
+    }
+
+    .btn:hover::before {
+        height: 300%;
+    }
+
+    .email {
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+    .texto {
+        font-size: 18pt;
+        color: rgb(160, 159, 159);
+    }
+
+    .font-tema {
+        color: #0effa3;
+    }
+        #btnprojeto{
+        background-color: transparent;
+        cursor: pointer;
+        padding: 10px;
+        border: 1px white solid;
+        border-radius: 5px;
+        margin-top: 50px;
+    }
+        #vermais.mostrar{
+        display: flex;
+    }
+        #contato{
+        display: flex;
+        width: 70%;
+        height: 80vh;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        text-align: justify;
+    }
+}
+
+@media (min-width: 992px) {
+    h1 {
+        font-size: 50pt;
+    }
+    .menu-mobile{
+        cursor: pointer;
+        display: block;
+
+    
+    }
+    .linhas{
+        height: 2px;
+        width: 20px;
+        background-color: white;
+        margin-bottom: 5px;
+        transition: 0.5s;
+    }
+    /* HEADER */
+    .header-menu {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 15px;
+        text-transform: uppercase;
+        width: 100%;
+        position: fixed;
+        z-index: 1000;
+        background-color: #3d383881;
+    }
+
+    .menu {
+        display: flex;
+        gap: 20px;
+        height: 90%;
+        flex-direction: column;
+        justify-content: space-around;
+        font-size: 35pt;
+        font-weight: 300;
+        z-index: 1000;
+
+    }
+
+    .navbar {
+        backdrop-filter: blur(7px);
+        position: absolute;
+        top: 60px;
+        height: calc(100vh - 70px);
+        width: 100%;
+        display: none;
+        justify-content: center;
+        z-index: 1000;
+    }
+    .navbar.active{
+        display: flex;
+    }
+
+
+    #mobile.active > div:nth-child(1) {
+        transform: rotate(45deg);
+        top: 7px;
+        position: relative;
+    }
+    #mobile.active > div:nth-child(2) {
+        display: none;
+    }
+    #mobile.active > div:nth-child(3) {
+        transform: rotate(-45deg);
+    }
+
+    .navbar-social {
+        width: 20%;
+        font-size: 20pt;
+    }
+
+    .logo {
+        width: auto;
+        display: block;
+
+    }
+
+    .menu a:hover {
+        letter-spacing: 2px;
+    }
+
+    .menu-social {
+        display: flex;
+        gap: 10px;
+    }
+
+    /* FIM DO HEADER */
+    /* CONTEUDO */
+    #container-principal {
+        width: 992px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .conteudo {
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .conteudo a {
+        margin-top: 10px;
+    }
+
+    .conteudo-aside {
+        display: flex;
+        width: 70%;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        text-align: justify;
+    }
+
+    /* projetos ------------------------------------------------*/
+    .conteudo-projetos {
+        display: flex;
+        width: 70%;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        text-align: justify;
+        flex-direction: column;
+        margin-bottom: 100px;
+    }
+
+    .projetos {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .conteudo-projetos a {
+        margin-top: 30px;
+    }
+
+    #vermais {
+        display: none;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    #vermais>div {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        width: 300px;
+        height: 300px;
+        background-color: gray;
+        overflow: hidden;
+        position: relative;
+        justify-content: center;
+
+    }
+    .projetos>div {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+        width: 300px;
+        height: 300px;
+        background-color: gray;
+        overflow: hidden;
+    }
+    .faixa{
+        width: 500px;
+        position: absolute;
+        display: block;
+        background-color: #0effa3;
+        rotate: 45deg;
+        text-align: center;
+        font-size: 15pt;
+        cursor: default;
+    }
+    .faixa:hover{
+        letter-spacing: 2px;
+    }
+
+    /* fim projetos ------------------------------------------------*/
+
+    /* skills */
+    .skills {
+        display: flex;
+        flex-wrap: wrap;
+        width: 80%;
+        gap: 30px;
+        justify-content: space-around;
+        margin: 0 auto;
+    }
+
+    .skills li {
+        display: flex;
+        flex-direction: column;
+        width: 100px;
+        height: 100px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .skills img {
+        height: 45px;
+        margin-top: 10px;
+    }
+
+    /* FIM DE SKILLS ---------------------- */
+    .footer {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        font-size: 13pt;
+        background-color: rgba(22, 22, 22, 0.514);
+    }
+
+    /* classes */
+    .text-center {
+        text-align: center;
+        font-size: 27pt;
+        margin-bottom: 20px;
+    }
+
+    .btn {
+        display: block;
+        max-width: 120px;
+        padding: 10px;
+        border: 1px rgb(255, 255, 255) solid;
+        text-align: center;
+        border-radius: 5px;
+        position: relative;
+        overflow: hidden;
+        z-index: 0 !important;
+    }
+
+    .btn::before {
+        content: '';
+        width: 100%;
+        height: 0;
+        background-color: rgb(110, 110, 110);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(50deg);
+        transition: 0.5s;
+
+    }
+
+    .btn:hover::before {
+        height: 300%;
+    }
+
+    .email {
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+    .texto {
+        font-size: 18pt;
+        color: rgb(160, 159, 159);
+    }
+
+    .font-tema {
+        color: #0effa3;
+    }
+    #btnprojeto{
+        background-color: transparent;
+        cursor: pointer;
+        padding: 10px;
+        border: 1px white solid;
+        border-radius: 5px;
+        margin-top: 50px;
+    }
+        #vermais.mostrar{
+        display: flex;
+    }
+        #contato{
+        display: flex;
+        width: 70%;
+        height: 80vh;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        text-align: justify;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .menu-mobile{
+        cursor: pointer;
+        display: none;
+    }
+    .linhas{
+        height: 2px;
+        width: 20px;
+        background-color: white;
+        margin-bottom: 5px;
+    }
+    /* HEADER */
+    .header-menu {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 15px;
+        text-transform: uppercase;
+        width: 100%;
+        position: fixed;
+        background-color: #3d383865;
+        backdrop-filter: blur(5px);
+    }
+
+    .menu {
+        display: flex;
+        gap: 20px;
+        height: 50%;
+        flex-direction: row;
+        justify-content: none;
+        font-size: 12pt;
+        font-weight: 300;
+        
+    }
+    .navbar {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        backdrop-filter: none;
+        position: relative;
+        top: auto;
+        background-color: none;
+        height: auto;
+    }
+    .navbar-social {
+        width: 20%;
+        font-size: 20pt;
+    }
+    .logo {
+        width: 10%;
+        display: block;
+    }
+
+    .menu a:hover {
+        letter-spacing: 1.5px;
+        color: #0effa3;
+    }
+
+    .menu-social {
+        display: flex;
+        gap: 10px;
+    }
+
+    /* FIM DO HEADER */
+    /* CONTEUDO */
+    #container-principal {
+        width: 1200px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .conteudo {
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .conteudo a {
+        margin-top: 10px;
+    }
+
+    .conteudo-aside {
+        display: flex;
+        width: 70%;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        text-align: justify;
+    }
+
+    /* projetos ------------------------------------------------*/
+    .conteudo-projetos {
+        display: flex;
+        width: 70%;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        text-align: justify;
+        flex-direction: column;
+        margin-bottom: 100px;
+    }
+
+    .projetos {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+
+    .conteudo-projetos a {
+        margin-top: 30px;
+    }
+
+    #vermais {
+        display: none;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    #btnprojeto{
+        background-color: transparent;
+        cursor: pointer;
+        padding: 10px;
+        border: 1px white solid;
+        border-radius: 5px;
+        margin-top: 50px;
+    }
+        
+    #vermais.mostrar{
+        display: flex;
+    }
+
+    #vermais>div {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        width: 300px;
+        height: 300px;
+        background-color: gray;
+        overflow: hidden;
+        position: relative;
+        justify-content: center;
+
+    }
+    .projetos>div {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+        width: 300px;
+        height: 300px;
+        background-color: gray;
+        overflow: hidden;
+    }
+    .faixa{
+        width: 500px;
+        position: absolute;
+        display: block;
+        background-color: #0effa3;
+        rotate: 45deg;
+        text-align: center;
+        font-size: 15pt;
+        cursor: default;
+    }
+    .faixa:hover{
+        letter-spacing: 2px;
+    }
+
+    /* fim projetos ------------------------------------------------*/
+
+    /* skills */
+    .skills {
+        display: flex;
+        flex-wrap: wrap;
+        width: 70%;
+        gap: 30px;
+        justify-content: space-around;
+        margin: 0 auto;
+    }
+
+    .skills li {
+        display: flex;
+        flex-direction: column;
+        width: 100px;
+        height: 100px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .skills img {
+        height: 45px;
+        margin-top: 10px;
+    }
+    #contato{
+        display: flex;
+        width: 70%;
+        height: 80vh;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        text-align: justify;
+    }
+
+    /* FIM DE SKILLS ---------------------- */
+    .footer {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        font-size: 13pt;
+        background-color: rgba(22, 22, 22, 0.514);
+    }
+
+    /* classes */
+    .text-center {
+        text-align: center;
+        font-size: 27pt;
+        margin-bottom: 20px;
+    }
+
+    .btn {
+        display: block;
+        max-width: 120px;
+        padding: 10px;
+        border: 1px rgb(255, 255, 255) solid;
+        text-align: center;
+        border-radius: 5px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .btn::before {
+        content: '';
+        width: 100%;
+        height: 0;
+        background-color: rgb(110, 110, 110);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(50deg);
+        z-index: -1;
+        transition: 0.5s;
+
+    }
+
+    .btn:hover::before {
+        height: 300%;
+    }
+
+    .email {
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+    .texto {
+        font-size: 18pt;
+        color: rgb(160, 159, 159);
+    }
+
+    .font-tema {
+        color: #0effa3;
+    }
+}
