@@ -143,9 +143,6 @@ body {
         display: none;
     }
 
-    .menu a:hover {
-        letter-spacing: 2px;
-    }
 
     .menu-social {
         display: flex;
@@ -438,9 +435,6 @@ body {
         display: none;
     }
 
-    .menu a:hover {
-        letter-spacing: 2px;
-    }
 
     .menu-social {
         display: flex;
@@ -731,9 +725,7 @@ body {
         width: 15%;
     }
 
-    .menu a:hover {
-        letter-spacing: 2px;
-    }
+
 
     .menu-social {
         display: flex;
@@ -1024,13 +1016,11 @@ body {
 
     .logo {
         width: auto;
-        display: block;
+        display: none;
 
     }
 
-    .menu a:hover {
-        letter-spacing: 2px;
-    }
+
 
     .menu-social {
         display: flex;
@@ -1296,12 +1286,18 @@ body {
         font-size: 20pt;
     }
     .logo {
-        width: 10%;
+        width: 15%;
         display: block;
+        font-family: 'Reenie Beanie', cursive;
+
+        color: #ffffff;
+
+    }
+    .logo:hover{
+        filter: brightness(0.9);
     }
 
     .menu a:hover {
-        letter-spacing: 1.5px;
         color: #0effa3;
     }
 
