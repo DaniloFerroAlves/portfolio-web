@@ -45,10 +45,10 @@
             <nav class="navbar" id="nav">
                 <ul class="menu">
                     <li class="link"><a href="#home">Home</a></li>
-                    <li class="link2"><a href="#about">Sobre mim</a></li>
-                    <li class="link3"><a href="#projetos">projetos</a></li>
-                    <li class="link4"><a href="#skills">Habilidades</a></li>
-                    <li class="link5"><a href="#contato">Contato</a></li>
+                    <li class="link"><a href="#about">Sobre mim</a></li>
+                    <li class="link"><a href="#projetos">projetos</a></li>
+                    <li class="link"><a href="#skills">Habilidades</a></li>
+                    <li class="link"><a href="#contato">Contato</a></li>
                 </ul>
             </nav>
             <!-- nav-social-->
@@ -76,13 +76,13 @@
             </main>
             <section>
                 <!-- about me -->
-                <article class="conteudo-aside" id="about">
+                <article class="conteudo-aside" id="about" data-anime="left">
                     <div>
                         <h2 class="text-center">Sobre <span class="font-tema">mim</span> </h2>
                         <p class="texto">Olá! Meu nome é Danilo e me divirto criando coisas que vivem na internet. Meu interesse em desenvolvimento Web começou em 2022/03 quando eu fazia curso técnico de TI e então desde que eu terminei o curso decidi em meus tempos livres estudar e praticar.</p>
                     </div>
                 </article>
-                <article class="conteudo-projetos" id="projetos">
+                <article class="conteudo-projetos" id="projetos" data-anime="left">
                     <!-- projetos -->
                     <h2 class="text-center">Meus <span class="font-tema">Projetos</span> </h2>
                     <div class="projetos">
@@ -118,7 +118,7 @@
                     </div>
                     <button id="btnprojeto">Ver mais</button>  
                 </article>
-                <article class="conteudo-aside" id="skills">
+                <article class="conteudo-aside" id="skills" data-anime="left">
                     <!-- skills -->
                     <div>
                         <h2 class="text-center">Minhas <span class="font-tema">Skills</span> </h2>
@@ -150,7 +150,7 @@
                         </ul>
                     </div>
                 </article>
-                <article id="contato">
+                <article id="contato" data-anime="left">
                     <div>
                         <h2 class="text-center">Entrar em <span class="font-tema">Contato</span> </h2>
                         <p class="texto"> Eu estou a procura de oportunidades de primeiro emprego no momento, minha caixa de entrada está sempre aberta. Se você tem uma pergunta ou apenas quer dizer oi, farei o possível para entrar em contato com você!</p>
@@ -161,10 +161,11 @@
             </section>
         </div>
         <footer class="footer">
-            <p>&copy; Desenvolvido por <span class="font-tema">Danilo Ferro Alves </span> - 2022/2023</p>
+            <p>&copy; Desenvolvido por <span class="font-tema">Danilo Ferro Alves </span> - 2022/2023<span id="anoatual"></span> </p>
         </footer>
     </div>
     <!-- navbar -->
     <script src="main.js"></script>
+    <script src="scroll.js"></script>
 </body>
 </html>

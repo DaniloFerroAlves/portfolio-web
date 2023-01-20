@@ -61,7 +61,7 @@ function loading() {
     setTimeout(() => {
         document.getElementsByClassName('box-load')[0].style.display = "none"
         document.getElementsByClassName('allcontent')[0].style.display = "block"
-    }, 2500)
+    }, 1000)
 
 }
 
@@ -77,9 +77,14 @@ function vimg() {
     linkimgr.addEventListener('mouseover', ()=>{
         linkimgr.style.display = 'block'
     })
-    linkimgr.style.display = 'block'
+    if(linkimgr.style.display = 'block') {
+        imgprojeto.style.opacity = '0.7'
+    }
+    
 }
 function oimg() {
-
     linkimgr.style.display = 'none'
 }
+
+
+

@@ -55,13 +55,26 @@ body {
 .bolinhas{
     display: flex;
 }
-
+[data-anime]{
+    opacity: 0;
+    transition: .6s;
+}
+[data-anime="left"] {
+    transform: translate3d(-50px, 0, 0);
+}
+.animar{
+    opacity: 1.0;
+    transform: translate3d(0px , 0px , 0px);
+}
 @keyframes quicar{
     to {
         width: 20px;
         height: 20px;
         transform: translate3d(0, -16px, 0);
     }
+}
+.projetos .imgprojeto:hover{
+    filter: blur(1px);
 }
 
 @media (max-width: 576px) {
@@ -226,9 +239,7 @@ body {
         .projetos img{
         max-width: 100%;
     }
-        .projetos img:hover{
-        filter: blur(2px);
-    }
+    
         .projetos>div a{
         padding: 0;
         margin: 0;
@@ -554,9 +565,7 @@ body {
         .projetos img{
         max-width: 100%;
     }
-        .projetos img:hover{
-        filter: blur(2px);
-    }
+
         .projetos>div a{
         padding: 0;
         margin: 0;
@@ -882,9 +891,7 @@ body {
         .projetos img{
         max-width: 100%;
     }
-        .projetos img:hover{
-        filter: blur(2px);
-    }
+
         .projetos>div a{
         padding: 0;
         margin: 0;
@@ -1214,9 +1221,7 @@ body {
         .projetos img{
         max-width: 100%;
     }
-        .projetos img:hover{
-        filter: blur(2px);
-    }
+
         .projetos>div a{
         padding: 0;
         margin: 0;
@@ -1437,16 +1442,24 @@ body {
         width: 15%;
         display: block;
         font-family: 'Reenie Beanie', cursive;
-
         color: #ffffff;
-
     }
     .logo:hover{
         filter: brightness(0.9);
     }
-
+    .menu a{
+        display: block;
+        padding: 0px 10px;
+        transition: 0.5s ease-out;
+    }
+    
     .menu a:hover {
-        color: #0effa3;
+        background-color: #6e6e6e;
+        border-radius: 5px;
+    }
+    .menu .tab{
+        background-color: #6e6e6e;
+        border-radius: 5px;
     }
 
     .menu-social {
@@ -1511,9 +1524,6 @@ body {
     .projetos img{
         max-width: 100%;
        
-    }
-    .projetos img:hover{
-        filter: blur(2px);
     }
 
     #vermais {
