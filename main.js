@@ -61,6 +61,25 @@ function loading() {
     setTimeout(() => {
         document.getElementsByClassName('box-load')[0].style.display = "none"
         document.getElementsByClassName('allcontent')[0].style.display = "block"
-    }, 3000)
+    }, 2500)
 
+}
+
+let imgprojeto = document.querySelector('.imgprojeto')
+imgprojeto.addEventListener('mouseover', vimg)
+imgprojeto.addEventListener('mouseleave', oimg)
+
+let linkimgr = document.querySelector('.linkalt')
+
+
+function vimg() {
+   
+    linkimgr.addEventListener('mouseover', ()=>{
+        linkimgr.style.display = 'block'
+    })
+    linkimgr.style.display = 'block'
+}
+function oimg() {
+
+    linkimgr.style.display = 'none'
 }
